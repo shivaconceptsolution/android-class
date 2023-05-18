@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -15,6 +16,7 @@ public class MainActivity6 extends AppCompatActivity {
     ToggleButton tb;
     Switch sw;
     TextView txtv,txtv1;
+    ImageButton imgb;
     LinearLayout main;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,13 @@ public class MainActivity6 extends AppCompatActivity {
         txtv = findViewById(R.id.txtres3);
         txtv1 = findViewById(R.id.txtres4);
         main = findViewById(R.id.mainlayout);
+        imgb = findViewById(R.id.imgbtn);
+        imgb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imgb.setImageResource(R.drawable.imgnew);
+            }
+        });
         main.setBackgroundColor(Color.GRAY);
         tb.setOnClickListener(new View.OnClickListener() {
             @Override
